@@ -6,17 +6,12 @@ get '/' do
   "Hello World!"
 end
 
-get '/h/:id/:type' do
-  params.inspect
-
+get '/haml/?' do
+  haml :haml, :layout => :layout
 end
 
-get '/haml/:id' do
-  haml :test, :layout => :layout
-end
-
-get '/css/?' do
-  sass :stylesheet
+get '/hello_sass/?' do
+  haml :test, :layout => :sass
 
 end
 
