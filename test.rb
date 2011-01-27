@@ -11,7 +11,8 @@ get '/haml/?' do
 end
 
 get '/hello_sass/?' do
-  haml :test, :layout => :sass
+
+  sass :sass
 
 end
 
