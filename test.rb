@@ -23,7 +23,7 @@ get '/hello_json/?' do
 end
 
 get "/hello_xml/?" do
-  
+  content_type :xml
 CobraVsMongoose.hash_to_xml({ "hello" => { "$" => "world"} }
 )
  	
