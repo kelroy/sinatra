@@ -26,3 +26,9 @@ get "/xml/?" do
   haml(:xml,:layout => false)
  	
 end
+
+get '/hello_input/:input' do
+  params[:input]
+
+end
+
