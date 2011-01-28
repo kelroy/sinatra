@@ -2,6 +2,7 @@ require 'rubygems'
 require 'sinatra'
 require 'haml'
 require 'json'
+require 'active_support'
 
 
 get '/' do
@@ -16,14 +17,14 @@ get '/hello_sass/?' do
   sass :sass
 end
 
-get '/json/?' do
+get '/hello_json/?' do
   content_type :text
-  { :key1 => 'value1', :key2 => 'value2' }.to_json
+  { :hello => 'world'}.to_json
 end
 
-get "/xml/?" do
+get "/hello_xml/?" do
   
-  haml(:xml,:layout => false)
+{ :hello => 'world'}.to_xml
  	
 end
 
