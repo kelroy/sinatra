@@ -2,7 +2,7 @@ require 'rubygems'
 require 'sinatra'
 require 'haml'
 require 'json'
-require 'active_support'
+require 'cobravsmongoose'
 
 
 get '/' do
@@ -24,7 +24,8 @@ end
 
 get "/hello_xml/?" do
   
-{ :hello => 'world'}.to_xml
+CobraVsMongoose.hash_to_xml({ "hello" => { "$" => "world"} }
+)
  	
 end
 
