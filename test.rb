@@ -9,7 +9,7 @@ configure do
 end
 
 
-get '/' do
+get '/?' do
   "Hello World!"
 end
 
